@@ -13,5 +13,5 @@
 If you have **Go** installed on your device, you can install **Vile** easily:
 
 ```
-go get github.com/sami2020pro/vile/...
+go get -u github.com/sami2020pro/vile/...
 ```
