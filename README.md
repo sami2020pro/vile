@@ -9,6 +9,13 @@
     />
 </a>
 
+# Hello World
+`Hello, World!` example in **Vile**:
+
+```
+(puts "Hello, World!")
+```
+
 # Getting started
 If you have **Go** installed on your device, you can install **Vile** easily:
 
