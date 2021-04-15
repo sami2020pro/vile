@@ -28,6 +28,22 @@
 (puts (fibonacci_recursion 8))
 ```
 
+`Factorial` in **Vile**:
+
+```
+(fn factorial(n)
+        (if (= n 1) n
+                (if (= n 0) n
+                        (* n (factorial (- n 1)) )))
+)
+
+(puts (factorial 1))
+(puts (factorial 0))
+(puts (factorial 3))
+(puts (factorial 4))
+(puts (factorial 5))
+```
+
 # Getting started
 If you have **Go** installed on your device, you can install **Vile** easily:
 
