@@ -365,8 +365,5 @@ var MacroErrorKey = Intern("macro-error:")
 // IOErrorKey
 var IOErrorKey = Intern("io-error:")
 
-// HttpErrorKey
-var HTTPErrorKey = Intern("http-error:")
-
 // InterruptKey
 var InterruptKey = Intern("interrupt:")
