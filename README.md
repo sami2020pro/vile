@@ -34,11 +34,11 @@
 (fn factorial(n)
         (if (= n 1) n
                 (if (= n 0) n
-                        (* n (factorial (- n 1)) )))
+                        (* n (factorial (- n 1)))))
 )
 
-(puts (factorial 1))
 (puts (factorial 0))
+(puts (factorial 1))
 (puts (factorial 3))
 (puts (factorial 4))
 (puts (factorial 5))
