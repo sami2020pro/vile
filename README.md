@@ -16,6 +16,18 @@
 (puts "Hello, World!")
 ```
 
+# Preview
+`Fibonacci Recursion` in **Vile**:
+
+```
+(fn fibonacci_recursion(n)
+        (if (<= n 1) n
+                (+ (fibonacci_recursion (- n 1)) (fibonacci_recursion (- n 2))))
+)
+
+(puts (fibonacci_recursion 8))
+```
+
 # Getting started
 If you have **Go** installed on your device, you can install **Vile** easily:
 
