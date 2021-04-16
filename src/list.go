@@ -247,7 +247,7 @@ func Flatten(lst *Object) *Object {
 }
 
 func Concat(seq1 *Object, seq2 *Object) (*Object, error) {
-	rev := Reverse(seq1)
+	rev := ReverseList(seq1)
 	if rev == EmptyList {
 		return seq2, nil
 	}
