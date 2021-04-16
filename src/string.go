@@ -15,6 +15,20 @@ func String(s string) *Object {
 	return str
 }
 
+func ReverseString(s string) *Object {
+	str := new(Object)
+	str.Type = StringType
+
+	rns := []rune(s)
+	for i, j := 0, len(rns)-1; i < j; i, j = i+1, j-1 {
+		rns[i], rns[j] = rns[j], rns[i]
+	}
+
+	str.text = string(rns)
+
+	return str
+}
+
 // AsStringValue - return the native string representation of the object, if possible
 func AsStringValue(obj *Object) (string, error) {
 	if !IsString(obj) {
