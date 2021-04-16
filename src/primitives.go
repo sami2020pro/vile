@@ -70,9 +70,10 @@ func InitPrimitives() {
 
 	/* TESTS */
 	DefineFunctionRestArgs("struct", vileStruct, StructType, AnyType)
-	DefineFunction("make-struct", vileMakeStruct, StructType, NumberType)
+	DefineFunction("make_struct", vileMakeStruct, StructType, NumberType)
 
 	DefineFunction("char?", vileCharP, BooleanType, AnyType)
+	DefineFunction("to_char", vileToChar, CharacterType, AnyType)
 }
 
 func vileQuasiquote(argv []*Object) (*Object, error) {
@@ -321,4 +322,8 @@ func vileCharP(argv []*Object) (*Object, error) {
 		return True, nil
 	}
 	return False, nil
+}
+
+func vileToChar(argv []*Object) (*Object, error) {
+	return ToCharacter(argv[0])
 }
