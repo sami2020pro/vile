@@ -236,7 +236,7 @@ func expandFn(expr *Object) (*Object, error) {
 				bindings = Cons(Cdr(def), bindings)
 				tmp = Cdr(tmp)
 			}
-			bindings = Reverse(bindings)
+			bindings = ReverseList(bindings)
 			tmp = Cons(Intern("letrec"), Cons(bindings, tmp))
 			tmp2, err := macroexpandList(tmp)
 			return List(Car(expr), Cadr(expr), tmp2), err
@@ -323,7 +323,7 @@ func crackLetrecBindings(bindings *Object, tail *Object) (*Object, *Object, bool
 		}
 		bindings = Cdr(bindings)
 	}
-	inits = Reverse(inits)
+	inits = ReverseList(inits)
 	head := inits
 	for inits.cdr != EmptyList {
 		inits = inits.cdr
