@@ -209,7 +209,7 @@ func ToList(obj *Object) (*Object, error) {
 	return nil, Error(ArgumentErrorKey, "to-list cannot accept ", obj.Type)
 }
 
-func Reverse(lst *Object) *Object {
+func ReverseList(lst *Object) *Object {
 	rev := EmptyList
 	for lst != EmptyList {
 		rev = Cons(lst.car, rev)
