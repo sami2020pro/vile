@@ -141,7 +141,7 @@ var NullType = Intern("<null>")
 var BooleanType = Intern("<boolean>")
 
 // CharacterType is the type of all characters
-var CharacterType = Intern("<character>")
+var CharacterType = Intern("<char>")
 
 // NumberType is the type of all numbers
 var NumberType = Intern("<number>")
