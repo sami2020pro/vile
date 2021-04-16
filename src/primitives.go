@@ -74,6 +74,9 @@ func InitPrimitives() {
 
 	DefineFunction("char?", vileCharP, BooleanType, AnyType)
 	DefineFunction("to_char", vileToChar, CharacterType, AnyType)
+
+	DefineFunction("reverse_list", vileReverseList, ListType, ListType)
+	DefineFunction("reverse_string", vileReverseString, StringType, StringType)
 }
 
 func vileQuasiquote(argv []*Object) (*Object, error) {
@@ -326,4 +329,12 @@ func vileCharP(argv []*Object) (*Object, error) {
 
 func vileToChar(argv []*Object) (*Object, error) {
 	return ToCharacter(argv[0])
+}
+
+func vileReverseList(argv []*Object) (*Object, error) {
+	return ReverseList(argv[0]), nil
+}
+
+func vileReverseString(argv []*Object) (*Object, error) {
+	return ReverseString(argv[0].text), nil
 }
