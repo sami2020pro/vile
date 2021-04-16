@@ -9,3 +9,4 @@ Table of contents:
 	:maxdepth: 3
 
 	introduction
+	basics
