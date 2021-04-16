@@ -67,6 +67,10 @@ func InitPrimitives() {
 	DefineFunctionRestArgs("concat", vileConcat, ListType, ListType)
 
 	DefineFunction("load", vileLoad, StringType, AnyType)
+
+	/* TESTS */
+	DefineFunctionRestArgs("struct", vileStruct, StructType, AnyType)
+	DefineFunction("make-struct", vileMakeStruct, StructType, NumberType)
 }
 
 func vileQuasiquote(argv []*Object) (*Object, error) {
@@ -299,4 +303,13 @@ func vileCompile(argv []*Object) (*Object, error) {
 func vileLoad(argv []*Object) (*Object, error) {
 	err := Load(argv[0].text)
 	return argv[0], err
+}
+
+/* TESTS */
+func vileStruct(argv []*Object) (*Object, error) {
+	return Struct(argv)
+}
+
+func vileMakeStruct(argv []*Object) (*Object, error) {
+	return MakeStruct(int(argv[0].fval)), nil
 }
