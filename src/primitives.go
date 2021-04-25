@@ -250,8 +250,8 @@ func vilePuts(argv []*Object) (*Object, error) {
 
 	for _, o := range argv {
 		stringVar = fmt.Sprintf("%v", o)
-		fmt.Println(stringVar)
-	}
+		fmt.Print(stringVar)
+	} fmt.Println()
 
 	return Null, nil
 }
