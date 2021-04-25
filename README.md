@@ -40,6 +40,22 @@
 (puts (factorial 5))
 ```
 
+`Mutual Recursion` in **Vile**:
+
+```
+(fn is_even(n)
+        (if (= n 0) "even"
+                (is_odd (- n 1)))
+)
+
+(fn is_odd(n)
+        (if (= n 0) "odd"
+                (is_even (- n 1)))
+)
+
+(puts "3653 is " (is_even 3653))
+```
+
 # Getting started
 If you have **Go** installed on your device, you can install **Vile** easily:
 
