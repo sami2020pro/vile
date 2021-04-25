@@ -77,6 +77,8 @@ func InitPrimitives() {
 
 	DefineFunction("reverse_list", vileReverseList, ListType, ListType)
 	DefineFunction("reverse_string", vileReverseString, StringType, StringType)
+
+	DefineFunction("**", vileExponentiation, NumberType, NumberType, NumberType)
 }
 
 func vileQuasiquote(argv []*Object) (*Object, error) {
@@ -338,4 +340,8 @@ func vileReverseList(argv []*Object) (*Object, error) {
 
 func vileReverseString(argv []*Object) (*Object, error) {
 	return ReverseString(argv[0].text), nil
+}
+
+func vileExponentiation(argv []*Object) (*Object, error) {
+	return Number(math.Pow(argv[0].fval, argv[1].fval)), nil
 }
