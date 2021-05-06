@@ -6,6 +6,7 @@ import (
 	"strconv"
 )
 
+/*
 // TEST
 type Test struct {
 	Value float64
@@ -14,6 +15,7 @@ type Test struct {
 func Integer(i int) *Test {
 	return &Test{Value: float64(i)}
 }
+*/
 
 // Zero is the Vile 0 value
 var Zero = Number(0)

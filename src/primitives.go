@@ -82,7 +82,7 @@ func InitPrimitives() {
 
 	DefineFunction("log10", vileLog10, NumberType, NumberType)
 
-	DefineFunction("vector_length", vileVectorLength, NumberType, VectorType)
+//	DefineFunction("vector_length", vileVectorLength, NumberType, VectorType)
 }
 
 func vileQuasiquote(argv []*Object) (*Object, error) {
@@ -354,7 +354,9 @@ func vileLog10(argv []*Object) (*Object, error) {
 	return Number(math.Log10(argv[0].fval)), nil
 }
 
+/*
 func vileVectorLength(argv []Value) (Value, error) {
 	vec, _ := argv[0].(*Vector)
 	return Integer(len(vec.Elements)), nil
 }
+*/
