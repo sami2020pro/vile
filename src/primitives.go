@@ -84,7 +84,7 @@ func InitPrimitives() {
 
 //	DefineFunction("vector_length", vileVectorLength, NumberType, VectorType)
 
-	DefineFunction("to_vector", vileToVector, AnyType, VectorType)
+	DefineFunction("to_vector", vileToVector, VectorType, AnyType)
 }
 
 func vileQuasiquote(argv []*Object) (*Object, error) {
