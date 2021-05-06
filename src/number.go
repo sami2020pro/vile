@@ -12,7 +12,7 @@ type Test struct {
 }
 
 func Integer(i int) *Test {
-	return &Number{Value: float64(i)}
+	return &Test{Value: float64(i)}
 }
 
 // Zero is the Vile 0 value
