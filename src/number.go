@@ -7,11 +7,11 @@ import (
 )
 
 // TEST
-type Number struct {
+type Test struct {
 	Value float64
 }
 
-func Integer(i int) *Number {
+func Integer(i int) *Test {
 	return &Number{Value: float64(i)}
 }
 
